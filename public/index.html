@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>NIRB TERMINAL</title>
+  <style>
+    body {
+      margin: 0;
+      background: #0a0a0a;
+      color: #00ff66;
+      font-family: Consolas, "Courier New", monospace;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .terminal {
+      width: 95%;
+      max-width: 950px;
+      height: 90vh;
+      background: #0a0a0a;
+      border: 1px solid #1a1a1a;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    .screen {
+      flex: 1;
+      padding: 12px;
+      overflow-y: auto;
+      white-space: pre-wrap;
+    }
+
+    .line {
+      margin: 2px 0;
+    }
+
+    .user {
+      color: #00ff66;
+    }
+
+    .bot {
+      color: #a8ffb0;
+    }
+
+    .inputBar {
+      display: flex;
+      border-top: 1px solid #1a1a1a;
+      padding: 8px;
+      background: #0a0a0a;
+    }
+
+    .prompt {
+      color: #00ff66;
+      margin-right: 6px;
+    }
+
+    input {
+      flex: 1;
+      background: transparent;
+      border: none;
+      outline: none;
+      color: #00ff66;
+      font-family: inherit;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="terminal">
+  <div class="screen" id="screen"></div>
+
+  <div class="inputBar">
+    <span class="prompt">C:\AI&gt;</span>
+    <input id="input" autocomplete="off" />
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
